@@ -1,0 +1,1889 @@
+
+<!-- saved from url=(0123)https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&tagSubmissionId=7643706976&tagActivityId=13076150 -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- BEGIN HEADER SECTION -->
+<link href="./U5L1_files/quia.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./U5L1_files/menu.css">
+<link href="./U5L1_files/web_inst_zone.css" rel="stylesheet"
+	type="text/css">
+<link href="./U5L1_files/cloze.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+</style>
+<!--[if IE]>
+<style type='text/css'>.trunc {width:100%;position:absolute;}</style>
+<![endif]-->
+
+<meta http-equiv="Pragma" content="no-cache">
+<title>Quia - Student Zone</title>
+<script type="text/javascript"
+	src="./U5L1_files/yahoo-dom-event.js.download"></script>
+<script type="text/javascript"
+	src="./U5L1_files/quia_20090514.js.download"></script>
+<script type="text/javascript" src="./U5L1_files/disablecp.js.download"></script>
+<link rel="stylesheet" href="./U5L1_files/noprint.css" type="text/css"
+	media="print">
+<script type="text/javascript" src="./U5L1_files/alttxt.js.download"></script>
+<script id="yui2loader" type="text/javascript"
+	src="./U5L1_files/yuiloader-min.js.download"></script>
+<script type="text/javascript">
+
+var previousAction = null;
+function submitInput(extraAction) {
+  if (previousAction == null) {
+    previousAction = "" + document.quiaWebForm.action;
+  }
+  document.quiaWebForm.action = previousAction+extraAction;
+  var submitRetVal = document.quiaWebForm.submit();  if(submitRetVal == undefined) {
+    document.quiaWebForm.action = previousAction;
+  }
+}
+
+tagWhereYFromJava = 'whereY';
+function runOnLoadFunctions(fieldName) {
+var whereY = -1;
+getWhereYandScroll(fieldName, whereY);
+}
+
+function runOnSubmitFunctions(curForm) {
+  saveScrollCoordinates(curForm);
+}
+</script>
+<!-- END HEADER SECTION -->
+<style></style>
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" rightmargin="0" topmargin="0"
+	marginwidth="0" marginheight="0" link="#0000cc" vlink="#0000cc"
+	alink="#0000cc" class="yui-skin-sam"
+	onload="runOnLoadFunctions(&#39;null&#39;)" text="#000000">
+	<iframe id="_yuiResizeMonitor" title="Text Resize Monitor"
+		tabindex="-1" role="presentation"
+		style="position: absolute; visibility: visible; background-color: transparent; border-width: 0px; width: 2em; height: 2em; left: 0px; top: -25px;"
+		src="./U5L1_files/saved_resource.html"></iframe>
+	<center>
+		<span class="text2">
+			<!-- class quia.activities.quiz.QuizResultsPage --> <!-- BEGIN HEADER SECTION -->
+			<link href="./U5L1_files/quia.css" rel="stylesheet" type="text/css">
+			<link href="./U5L1_files/cloze.css" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" href="./U5L1_files/container.css"
+				type="text/css">
+			<link rel="stylesheet" href="./U5L1_files/button.css" type="text/css">
+			<link rel="stylesheet" href="./U5L1_files/healthCheckAndSubmit.css"
+				type="text/css">
+			<link href="./U5L1_files/web_inst_zone.css" rel="stylesheet"
+				type="text/css">
+			<style type="text/css">
+#timer_layer {
+	font: bold 12px Verdana, Arial, Helvetica, sans-serif;
+	color: #339933;
+}
+
+#time_left {
+	font: bold 20px Courier New, Courier, mono;
+	color: #339933;
+}
+
+#timer_layer .explain {
+	font: normal 9px Verdana, Arial, Helvetica, sans-serif;
+	color: #666;
+}
+
+textarea, input, select {
+	font-size: 100%;
+}
+
+tr.highlight {
+	background-color: #D5EAF7;
+	cursor: pointer;
+}
+
+.line-50 {
+	line-height: 50%;
+}
+</style>
+
+			<title>Quia -</title> <!--[if IE]><script type="text/javascript" src="/script/excanvas.js"></script><![endif]-->
+			<script type="text/javascript"
+				src="./U5L1_files/yahoo-dom-event.js.download"></script> <script
+				type="text/javascript"
+				src="./U5L1_files/yahoo-dom-event.js.download"></script> <script
+				type="text/javascript" src="./U5L1_files/element-min.js.download"></script>
+			<script type="text/javascript"
+				src="./U5L1_files/button-min.js.download"></script> <script
+				type="text/javascript" src="./U5L1_files/connection-min.js.download"></script>
+			<script type="text/javascript"
+				src="./U5L1_files/container-min.js.download"></script> <script
+				type="text/javascript" src="./U5L1_files/utilities.js.download"></script>
+			<script type="text/javascript" src="./U5L1_files/json.js.download"></script>
+			<script type="text/javascript"
+				src="./U5L1_files/quia_20090514.js.download"></script> <script
+				type="text/javascript"
+				src="./U5L1_files/healthCheckAndSubmit.js.download"></script> <script
+				type="text/javascript">
+</script> <script type="text/javascript"
+				src="./U5L1_files/AccentBarUtils.js.download"></script> <script
+				type="text/javascript" src="./U5L1_files/x_core.js.download"></script>
+			<script type="text/javascript" src="./U5L1_files/x_event.js.download"></script>
+			<script type="text/javascript" src="./U5L1_files/x_drag.js.download"></script>
+			<script type="text/javascript">
+var isQuiaBookActivity = false;
+var MIN_X_POS = -560;
+var MAX_X_POS = 0;
+var highZ = 300;
+var rollDirection = ROLL_DIRECTION_LEFT;
+setTimeout("activeAccentBar()", 1000);
+function moveOrderItemUp(orderItemPrefix, inputPrefix, arrowPrefix, orderItemIndex) {
+  var curOrderItem = getItemWithId(orderItemPrefix + orderItemIndex);
+  var aboveOrderItem = getItemWithId(orderItemPrefix + (orderItemIndex - 1));
+  var curInputItem = getFormItemWithName(inputPrefix + orderItemIndex);
+  var aboveInputItem = getFormItemWithName(inputPrefix + (orderItemIndex - 1));
+
+  if (curOrderItem != null && aboveOrderItem != null && 
+      curInputItem != null && aboveInputItem != null) {
+    var curArrowItem = getItemWithId(arrowPrefix + orderItemIndex);
+    var aboveArrowItem = getItemWithId(arrowPrefix + (orderItemIndex - 1));
+    curArrowItem.innerHTML = curArrowItem.innerHTML;
+    aboveArrowItem.innerHTML = aboveArrowItem.innerHTML;
+
+    var curInnerHtml = curOrderItem.innerHTML;
+    curOrderItem.innerHTML = aboveOrderItem.innerHTML;
+    aboveOrderItem.innerHTML = curInnerHtml;
+
+    var curInputValue = curInputItem.value;
+    curInputItem.value = aboveInputItem.value;
+    aboveInputItem.value = curInputValue;
+
+  }
+}
+function moveOrderItemDown(orderItemPrefix, inputPrefix, arrowPrefix, orderItemIndex) {
+  var curOrderItem = getItemWithId(orderItemPrefix + orderItemIndex);
+  var belowOrderItem = getItemWithId(orderItemPrefix + (orderItemIndex + 1));
+  var curInputItem = getFormItemWithName(inputPrefix + orderItemIndex);
+  var belowInputItem = getFormItemWithName(inputPrefix + (orderItemIndex + 1));
+
+  if (curOrderItem != null && belowOrderItem != null && 
+      curInputItem != null && belowInputItem != null) {
+    var curArrowItem = getItemWithId(arrowPrefix + orderItemIndex);
+    var belowArrowItem = getItemWithId(arrowPrefix + (orderItemIndex + 1));
+    curArrowItem.innerHTML = curArrowItem.innerHTML;
+    belowArrowItem.innerHTML = belowArrowItem.innerHTML;
+
+    var curInnerHtml = curOrderItem.innerHTML;
+    curOrderItem.innerHTML = belowOrderItem.innerHTML;
+    belowOrderItem.innerHTML = curInnerHtml;
+
+    var curInputValue = curInputItem.value;
+    curInputItem.value = belowInputItem.value;
+    belowInputItem.value = curInputValue;
+
+  }
+}
+function getItemWithId(itemId) {
+  var item;
+  if (document.getElementById) {
+    item = document.getElementById(itemId);
+  }
+  else {
+    item = document.all(itemId);
+  }
+  return item;
+}
+function getFormItemWithName(formItemName) {
+  var formItem;
+  formItem = document.quiaForm.elements[formItemName];
+  return formItem;
+}
+function deselectOtherRadiosInCol(rowNamePrefix, selectedRowIndex, colIndex) {
+  var selectedRowName = rowNamePrefix + '' + selectedRowIndex;
+  var rowIndex = 0;
+  var rowName = rowNamePrefix + '' + rowIndex;
+  var curRadioRow = document.quiaForm.elements[rowName];
+  while (curRadioRow != null) {
+    if (curRadioRow[colIndex].name != selectedRowName) {
+      curRadioRow[colIndex].checked = false;
+    }
+    rowIndex++;
+    rowName = rowNamePrefix + '' + rowIndex;
+    curRadioRow = document.quiaForm.elements[rowName];
+  }
+}
+tagWhereYFromJava = 'whereY';
+function runOnLoadFunctions(fieldName) {
+var bannerDiv = document.getElementById('branding_banner');
+var timerDiv = document.getElementById('timer_layer');
+if (bannerDiv != null && timerDiv != null) {
+  var minHeight = bannerDiv.offsetHeight + 10;
+  timerDiv.top = minHeight + 'px';
+  setTopBuffer(minHeight);
+}
+}
+
+function runOnSubmitFunctions(curForm) {
+  saveScrollCoordinates(curForm);
+}
+</script> <!-- END HEADER SECTION -->
+
+
+			<noscript>&lt;div
+				style="background-color:f7db3c;border:0;color:#ff0000;font-weight:bold;font-size:13px;line-height:1.5em;margin:0
+				0 10px 0;padding:0;width:635px;"&gt;&lt;div
+				style="border:0;margin:0;padding:10px;"&gt;You will not be able to
+				use the accent buttons because you need to upgrade your browser or
+				you have disabled JavaScript.&lt;/div&gt;&lt;/div&gt;</noscript>
+			<div id="accentbar"
+				style="position: absolute; visibility: hidden; left: -560px; z-index: 300; top: 20px;">
+				<table bordercolor="#CCCCCC" cellspacing="0" cellpadding="3"
+					border="1">
+					<tbody>
+						<tr>
+							<td bgcolor="#8C8C8C">
+								<div style="cursor: default">
+									<table width="100%" cellspacing="0" cellpadding="2" border="0">
+										<tbody>
+											<tr>
+												<td><font color="#FFFFFF"><b>Accent bar</b></font></td>
+												<td align="right"><a
+													href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#"
+													onclick="toggleAccentBar();return false;"><img
+														src="./U5L1_files/activity_bar_close.gif" border="0"
+														alt="Close accent bar window"></a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td bgcolor="#FFFFFF">
+								<table cellspacing="0" cellpadding="2" border="0">
+									<tbody>
+										<tr>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;á&#39;)" class="quia_accent_button">
+													<center>á</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;é&#39;)" class="quia_accent_button">
+													<center>é</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;í&#39;)" class="quia_accent_button">
+													<center>í</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;ñ&#39;)" class="quia_accent_button">
+													<center>ñ</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;ó&#39;)" class="quia_accent_button">
+													<center>ó</center>
+												</button></td>
+										</tr>
+										<tr>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;ú&#39;)" class="quia_accent_button">
+													<center>ú</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;ü&#39;)" class="quia_accent_button">
+													<center>ü</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Á&#39;)" class="quia_accent_button">
+													<center>Á</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;É&#39;)" class="quia_accent_button">
+													<center>É</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Í&#39;)" class="quia_accent_button">
+													<center>Í</center>
+												</button></td>
+										</tr>
+										<tr>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Ñ&#39;)" class="quia_accent_button">
+													<center>Ñ</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Ó&#39;)" class="quia_accent_button">
+													<center>Ó</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Ú&#39;)" class="quia_accent_button">
+													<center>Ú</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;Ü&#39;)" class="quia_accent_button">
+													<center>Ü</center>
+												</button></td>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;¿&#39;)" class="quia_accent_button">
+													<center>¿</center>
+												</button></td>
+										</tr>
+										<tr>
+											<td align="center"><button type="button"
+													onclick="puttext(&#39;¡&#39;)" class="quia_accent_button">
+													<center>¡</center>
+												</button></td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="quizContent" style="width: 620px;">
+				<form class="fmQuiz" name="quiaForm" method="POST"
+					action="https://www.quia.com/servlets/null" autocomplete="off"
+					spellcheck="false">
+					<input type="hidden" name="SessionId" value="null"> <input
+						type="hidden" name="urlId" value="4022842">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tbody>
+							<tr>
+								<td class="quia_standard_medium_bold"><font color="#CC0000"><b>A1U5L1
+											Vocabulario Completo</b></font></td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><div
+										style="width: 1px; height: 12px;">
+										<!-- -->
+									</div></td>
+							</tr>
+						</tbody>
+					</table>
+					<br>
+					<table width="620" border="0" cellpadding="5" cellspacing="1">
+						<tbody>
+							<tr>
+								<td width="500" bgcolor="#FFFFCC"><span
+									class="quia_standard_non_fixed">Thank you. Your
+										responses have been automatically graded. Here are your
+										results.</span></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="500">
+									<table width="500" border="0" cellpadding="2" cellspacing="0">
+										<tbody>
+											<tr>
+												<td valign="top" bgcolor="#3467C7"><b><font
+														color="#FFFFFF">Score Summary</font></b></td>
+											</tr>
+										</tbody>
+									</table>
+									<table id="quiz-summary" width="500" border="0" cellpadding="2"
+										cellspacing="1" bgcolor="#CCCCCC">
+										<tbody>
+											<tr bgcolor="#FFFFFF">
+												<td colspan="2" valign="bottom"><font color="#666666">(Click
+														on question number to jump to question.)</font></td>
+												<td width="85" align="center"><b>points earned</b></td>
+												<td width="85" align="center"><b>points possible</b></td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q1">Question
+															1</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q2">Question
+															2</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q3">Question
+															3</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q4">Question
+															4</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q5">Question
+															5</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q6">Question
+															6</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q7">Question
+															7</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q8">Question
+															8</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q9">Question
+															9</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q10">Question
+															10</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q11">Question
+															11</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q12">Question
+															12</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q13">Question
+															13</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q14">Question
+															14</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q15">Question
+															15</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q16">Question
+															16</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q17">Question
+															17</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q18">Question
+															18</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q19">Question
+															19</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q20">Question
+															20</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q21">Question
+															21</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q22">Question
+															22</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q23">Question
+															23</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q24">Question
+															24</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q25">Question
+															25</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q26">Question
+															26</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q27">Question
+															27</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q28">Question
+															28</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q29">Question
+															29</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q30">Question
+															30</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q31">Question
+															31</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q32">Question
+															32</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q33">Question
+															33</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q34">Question
+															34</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q35">Question
+															35</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q36">Question
+															36</a></b></td>
+												<td align="center">incorrect</td>
+												<td align="center">0</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q37">Question
+															37</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q38">Question
+															38</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q39">Question
+															39</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q40">Question
+															40</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q41">Question
+															41</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#FFFFFF">
+												<td><b><a
+														href="https://www.quia.com/servlets/quia.web.QuiaWebManager?tagModuleType=20300&amp;tagSubmissionId=7643706976&amp;tagActivityId=13076150#q42">Question
+															42</a></b></td>
+												<td align="center">correct</td>
+												<td align="center">1</td>
+												<td align="center">1</td>
+											</tr>
+											<tr bgcolor="#DDE2F0">
+												<td colspan="2" align="right"><b>Score: (98%)</b></td>
+												<td align="center"><b>41</b></td>
+												<td align="center"><b>42</b></td>
+											</tr>
+										</tbody>
+									</table>
+								</td>
+								<td width="500">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+					<br> <br> <br>
+					<!-- BEGIN QUESTION SECTION -->
+					<table cellspacing="0" border="0" width="100%">
+						<tbody>
+							<tr>
+								<td class="quia_standard"><a name="q1"></a>
+								<ol start="1">
+										<li><div>
+												<span class="quia_standard">DVD player&nbsp;<input
+													type="text" name="1_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el lector DVD</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el lector DVD</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q2"></a>
+								<ol start="2">
+										<li><div>
+												<span class="quia_standard">room; bedroom&nbsp;<input
+													type="text" name="2_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el cuarto</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el cuarto</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q3"></a>
+								<ol start="3">
+										<li><div>
+												<span class="quia_standard">dresser&nbsp;<input
+													type="text" name="3_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la cómoda</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la cómoda</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q4"></a>
+								<ol start="4">
+										<li><div>
+												<span class="quia_standard">mirror&nbsp;<input
+													type="text" name="4_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el espejo</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el espejo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q5"></a>
+								<ol start="5">
+										<li><div>
+												<span class="quia_standard">rug&nbsp;<input
+													type="text" name="5_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la alfombra</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la alfombra</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q6"></a>
+								<ol start="6">
+										<li><div>
+												<span class="quia_standard">kitchen&nbsp;<input
+													type="text" name="6_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la cocina</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la cocina</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q7"></a>
+								<ol start="7">
+										<li><div>
+												<span class="quia_standard">patio&nbsp;<input
+													type="text" name="7_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el patio</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el patio</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q8"></a>
+								<ol start="8">
+										<li><div>
+												<span class="quia_standard">second&nbsp;<input
+													type="text" name="8_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">segundo</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">segunda</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">segundo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q9"></a>
+								<ol start="9">
+										<li><div>
+												<span class="quia_standard">ground floor&nbsp;<input
+													type="text" name="9_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la planta baja</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la planta baja</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q10"></a>
+								<ol start="10">
+										<li><div>
+												<span class="quia_standard">stairs&nbsp;<input
+													type="text" name="10_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la escalera</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la escalera</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q11"></a>
+								<ol start="11">
+										<li><div>
+												<span class="quia_standard">dining room&nbsp;<input
+													type="text" name="11_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el comedor</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el comedor</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q12"></a>
+								<ol start="12">
+										<li><div>
+												<span class="quia_standard">compact disc&nbsp;<input
+													type="text" name="12_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el disco compacto</span><br
+													class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el disco compacto</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q13"></a>
+								<ol start="13">
+										<li><div>
+												<span class="quia_standard">television set&nbsp;<input
+													type="text" name="13_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el televisor</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el televisor</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q14"></a>
+								<ol start="14">
+										<li><div>
+												<span class="quia_standard">third&nbsp;<input
+													type="text" name="14_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">tercero</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">tercera</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">tercero</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q15"></a>
+								<ol start="15">
+										<li><div>
+												<span class="quia_standard">radio&nbsp;<input
+													type="text" name="15_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el radio</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el radio</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q16"></a>
+								<ol start="16">
+										<li><div>
+												<span class="quia_standard">fifth&nbsp;<input
+													type="text" name="16_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">quinto</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">quinta</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">quinto</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q17"></a>
+								<ol start="17">
+										<li><div>
+												<span class="quia_standard">apartment&nbsp;<input
+													type="text" name="17_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el apartamento</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el apartamento</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q18"></a>
+								<ol start="18">
+										<li><div>
+												<span class="quia_standard">first&nbsp;<input
+													type="text" name="18_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">primero</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">primera</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">primero</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q19"></a>
+								<ol start="19">
+										<li><div>
+												<span class="quia_standard">house&nbsp;<input
+													type="text" name="19_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la casa</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la casa</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q20"></a>
+								<ol start="20">
+										<li><div>
+												<span class="quia_standard">lamp&nbsp;<input
+													type="text" name="20_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la lámpara</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la lámpara</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q21"></a>
+								<ol start="21">
+										<li><div>
+												<span class="quia_standard">floor (of a
+													building)&nbsp;<input type="text" name="21_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50">
+												</span><b>The following answer is acceptable:</b><br>
+												<span class="fians">el piso</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el piso</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q22"></a>
+								<ol start="22">
+										<li><div>
+												<span class="quia_standard">bed&nbsp;<input
+													type="text" name="22_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la cama</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la cama</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q23"></a>
+								<ol start="23">
+										<li><div>
+												<span class="quia_standard">floor (of a room)&nbsp;<input
+													type="text" name="23_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el suelo</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el suelo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q24"></a>
+								<ol start="24">
+										<li><div>
+												<span class="quia_standard">eighth&nbsp;<input
+													type="text" name="24_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">octavo</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">octava</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">octavo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q25"></a>
+								<ol start="25">
+										<li><div>
+												<span class="quia_standard">living room&nbsp;<input
+													type="text" name="25_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la sala</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la sala</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q26"></a>
+								<ol start="26">
+										<li><div>
+												<span class="quia_standard">sixth&nbsp;<input
+													type="text" name="26_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">sexto</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">sexta</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">sexto</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q27"></a>
+								<ol start="27">
+										<li><div>
+												<span class="quia_standard">garden&nbsp;<input
+													type="text" name="27_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">el
+																	jardín</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">el
+																	jardín (pl. los jardines)</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el jardín</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q28"></a>
+								<ol start="28">
+										<li><div>
+												<span class="quia_standard">furniture&nbsp;<input
+													type="text" name="28_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">los muebles</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">los muebles</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q29"></a>
+								<ol start="29">
+										<li><div>
+												<span class="quia_standard">thing&nbsp;<input
+													type="text" name="29_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">la cosa</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">la cosa</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q30"></a>
+								<ol start="30">
+										<li><div>
+												<span class="quia_standard">seventh&nbsp;<input
+													type="text" name="30_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">séptimo</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">séptima</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">séptimo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q31"></a>
+								<ol start="31">
+										<li><div>
+												<span class="quia_standard">curtains&nbsp;<input
+													type="text" name="31_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">las cortinas</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">las cortinas</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q32"></a>
+								<ol start="32">
+										<li><div>
+												<span class="quia_standard">armchair&nbsp;<input
+													type="text" name="32_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">el
+																	sillón</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">el
+																	sillón (pl. los sillones)</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el sillón</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q33"></a>
+								<ol start="33">
+										<li><div>
+												<span class="quia_standard">tenth&nbsp;<input
+													type="text" name="33_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">décimo</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">décima</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">décimo</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q34"></a>
+								<ol start="34">
+										<li><div>
+												<span class="quia_standard">to go up&nbsp;<input
+													type="text" name="34_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">subir</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">subir</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q35"></a>
+								<ol start="35">
+										<li><div>
+												<span class="quia_standard">ideal&nbsp;<input
+													type="text" name="35_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">ideal</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">ideal</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q36"></a>
+								<ol start="36">
+										<li><div>
+												<span class="quia_standard">sofa, couch&nbsp;<input
+													type="text" name="36_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el sofá</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="red"><span
+													class="figuess">el sofÃƒÂ¡</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 0 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q37"></a>
+								<ol start="37">
+										<li><div>
+												<span class="quia_standard">ninth&nbsp;<input
+													type="text" name="37_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">noveno</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">novena</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">noveno</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q38"></a>
+								<ol start="38">
+										<li><div>
+												<span class="quia_standard">CD player&nbsp;<input
+													type="text" name="38_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el tocadiscos compactos</span><br
+													class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el tocadiscos compactos</span></font><br
+													class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q39"></a>
+								<ol start="39">
+										<li><div>
+												<span class="quia_standard">to descend&nbsp;<input
+													type="text" name="39_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">bajar</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">bajar</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q40"></a>
+								<ol start="40">
+										<li><div>
+												<span class="quia_standard">video games&nbsp;<input
+													type="text" name="40_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">los videojuegos</span><br
+													class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">los videojuegos</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q41"></a>
+								<ol start="41">
+										<li><div>
+												<span class="quia_standard">closet; armoire&nbsp;<input
+													type="text" name="41_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answer is
+													acceptable:</b><br>
+												<span class="fians">el armario</span><br class="line-50">
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">el armario</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+							<tr>
+								<td class="quia_standard"><a name="q42"></a>
+								<ol start="42">
+										<li><div>
+												<span class="quia_standard">fourth&nbsp;<input
+													type="text" name="42_guess" size="15"
+													style="font-size: 100%;"
+													onkeypress="if(window.handleEnter){return handleEnter(this, event)}">&nbsp;<br
+													class="line-50">
+												<br class="line-50"></span><b>The following answers are
+													acceptable:</b><br>
+												<table>
+													<tbody>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">cuarto</span></td>
+														</tr>
+														<tr>
+															<td class="quia_standard">•</td>
+															<td class="quia_standard"><span class="fians">cuarta</span></td>
+														</tr>
+													</tbody>
+												</table>
+												<br class="line-50">
+												<b>Your response:</b><br>
+												<font class="quia_standard" color="green"><span
+													class="figuess">cuarto</span></font><br class="line-50">
+												<br class="line-50"> <b>Points earned:</b> 1 out of 1 <br>
+											</div></li>
+									</ol></td>
+							</tr>
+							<tr>
+								<td class="quia_standard">&nbsp;</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- END QUESTION SECTION -->
+					<br>
+					<br>
+				</form>
+			</div>
+			<script>
+var Dom = YAHOO.util.Dom;
+var Event = YAHOO.util.Event;
+if (YAHOO.env.ua.ie) {Dom.getElementsByClassName('clozehover', 'span', 'body', function(el) {
+var nl = Dom.getElementsByClassName('hover-content', 'span', el);
+Event.addListener(el, 'mouseover', function(ev) {
+Dom.setStyle(nl, 'display', 'inline-block');
+Dom.setStyle(el, 'background', '#fff');
+});
+Event.addListener(el, 'mouseout', function(ev) {
+Dom.setStyle(nl, 'display', 'none');
+Dom.setStyle(el, 'background', '#ffeedd');
+});
+});
+}
+</script> <script type="text/javascript" src="./U5L1_files/alttxt.js.download"></script>
+
+
+		</span>
+	</center>
+	<script type="text/javascript"
+		src="./U5L1_files/container_core-min.js.download"></script>
+	<script type="text/javascript" src="./U5L1_files/menu-min.js.download"></script>
+	<script type="text/javascript"
+		src="./U5L1_files/quia_web_20090410.js.download"></script>
+
+
+	<div id="navtxt"
+		class="yui-module yui-overlay navtext yui-overlay-hidden"
+		style="z-index: 2; visibility: hidden;"></div>
+</body>
+</html>

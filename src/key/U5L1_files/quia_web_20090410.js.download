@@ -1,0 +1,371 @@
+/**
+ * For Quia Web Only
+ * not for Quia Book
+ *
+ * speng, 04/10/2009
+ *
+ */
+
+var Event = YAHOO.util.Event;
+var Dom = YAHOO.util.Dom;
+
+QUTL = {}; // quia js utility
+
+/**
+ * QUTL.bubbleUp
+ *
+ * bubbleUp method is useful when delegate one listener to a list of DOM
+ * elements
+ *
+ * INPUT:
+ * e - event
+ * stopAt - id of DOM element where the bubbling up stops
+ * searchNodeName - the node type we are interested in
+ * attrArr - optional, listing additional attributes that we are interested in
+ *
+ * example:
+ * tutorialLtDv contains a list of li which contains <a>, in addition to
+ * first node value, id, and href value, we are also interested in the
+ * value of attribute url
+ *
+ * QUTL.bubbleUp(e, 'tutorialLtDv', 'a', ['url']);
+ *
+ * OUTPUT:
+ * if we failed to find designed DOM element, return false
+ * else returning ret object which contains 4 value pairs:
+ *
+ * 1. firstVal - node value of first child node of desired DOM element
+ *    ex. <a href=''>hello</a>, firstVal is 'hello'
+ * 2. id - value of attribute id
+ * 3. href - value of href attribute
+ * 4. attrVal - array of attribute we are interested in
+ *
+ */
+
+QUTL.bubbleUp = function(e, stopAt, searchNodeName, attrArr){
+  var ret = {
+    'firstVal':null, // default return
+    'id':null, // default return
+    'href':null, // default return
+    'attrVal':null // optional, per attrArr input
+  };
+  var tmpAttrValArr = [];
+  var elTarget = Event.getTarget(e);
+  while (elTarget.id != stopAt) {
+    if(elTarget.nodeName.toUpperCase() == searchNodeName.toUpperCase()) {
+      ret['firstVal'] = Dom.get(elTarget.id).childNodes[0].nodeValue;
+      ret['id'] = elTarget.id;
+      ret['href'] = elTarget.href;
+      if (attrArr){
+        for (var i=0;i<attrArr.length;i++){
+          tmpAttrValArr[attrArr[i]]
+            = Dom.get(elTarget.id).getAttribute(attrArr[i]);
+        } // for
+        ret['attrVal'] = tmpAttrValArr;
+      } // if (attArr)
+      return ret;
+      break;
+    } else {
+      elTarget = elTarget.parentNode;
+    }
+  } // while
+  return false;
+};
+/**
+ * QUTL.tutorialFrmLk - used by tutorail droplist feature and tutorial center
+ *
+ */
+QUTL.tutorialFrmLk = function(e){
+  Event.preventDefault(e);
+  var elTarget = Event.getTarget(e);
+  QUTL.tutorialWindow(elTarget.href, false);
+};
+/**
+ * QUTL.tutorialWindow - used by tutorail droplist feature and tutorial center
+ *
+ */
+QUTL.tutorialWindow = function(url, tutorialHome){
+  if (url){
+    if (tutorialHome){
+      var winFea = 'width=960,height=860,screenX=75,screenY=75,resizable=yes,scrollbars=yes,toolbar=yes,alwaysraised=yes';
+      var newWin = window.open(url,'TutorialHome', winFea);
+    }
+    else {
+      var winFea = 'width=850,height=650,screenX=75,screenY=75,resizable=yes,scrollbars=no,toolbar=no,alwaysraised=yes';
+      var newWin = window.open(url,'Tutorial', winFea);
+      newWin.focus();
+    } // if
+  } // if (url)
+};
+
+/**
+ * tutorial link droplist
+ *
+ * if css class, yui-skin-sam, is missing from body tag, add it.
+ * if help link isn't there, shift drop list to right align.
+ * QTM.ttMenu is declare in Page.drawTutorialComponents.
+ * QTM.addTutorialLk adds tutorial link to page header bar (light blue bar),
+ * where the place holder, tutorialLkDv, resides.
+ */
+QTM = {}; // quia tutorial menu
+QTM.ttLkDvArr = Dom.getElementsByClassName('tutorialLkDv','div','qwbody');
+QTM.ttMenu = null;
+QTM.listenTo = null;
+
+QTM.openTutorial = function(e){
+  Event.preventDefault(e);
+  var ret = QUTL.bubbleUp(e, 'tutorialMenu', 'a');
+  if (ret.id === 'seeAllTutorialsLk'){
+    QUTL.tutorialWindow(ret['href'], true);
+  }
+  else {
+    QUTL.tutorialWindow(ret['href'], false);
+  }
+};
+QTM.showTutorialMenu = function(e){
+  QTM.ttMenu.show();
+};
+QTM.hideTutorialMenu  = function(){
+  QTM.ttMenu.hide();
+};
+QTM.onShow = function(){
+  Event.addListener('tutorialMenu', 'click', QTM.openTutorial);
+  Dom.addClass(QTM.ttLkDvArr[0], 'ttLkDvActive');
+  Event.addListener(document.body, 'mouseover', QTM.hideWhenMouseOut);
+  Dom.get(QTM.listenTo).focus();
+}
+QTM.onHide = function(){
+  Event.removeListener(document.body, 'mouseover', QTM.hideWhenMouseOut);
+  Event.removeListener('tutorialMenu', 'click', QTM.openTutorial);
+  Dom.removeClass(QTM.ttLkDvArr[0], 'ttLkDvActive');
+};
+QTM.chkAddSamToBody = function(){
+  if (!Dom.hasClass(document.body, 'yui-skin-sam')){
+    Dom.addClass(document.body, 'yui-skin-sam');
+  }
+};
+QTM.chkHelpLk = function(){
+  // check to see if any helpLkDv, which is help link on blue header page,
+  // exists
+  var helpLkDvArr = Dom.getElementsByClassName('helpLkDv','div','qwbody');
+  if (helpLkDvArr.length > 0){
+    return true;
+  }
+  else {
+    return false;
+  } // end if
+};
+QTM.hideWhenMouseOut = function(e){
+  var elTarget = Event.getTarget(e);
+  var testStr = 'test';
+  var hideFlag = true;
+  while(elTarget.nodeName.toUpperCase() != 'BODY'){
+    if (elTarget.id == 'tutorialMenu'
+        || elTarget.className.indexOf('tutorialLkDv') > -1){
+      hideFlag = false;
+      break;
+    }
+    else {
+      elTarget = elTarget.parentNode;
+    }
+  }// while
+  if (hideFlag){
+    QTM.hideTutorialMenu();
+  }
+};
+QTM.addTutorialLk = function(){
+  QTM.chkAddSamToBody();
+  var tmpDiv = document.createElement('a');
+  tmpDiv.innerHTML = 'Tutorials';
+  tmpDiv.id = QTM.listenTo;
+  tmpDiv.setAttribute('tabindex', '1');
+  Dom.addClass(tmpDiv, 'tutorialLkImg');
+  QTM.ttLkDvArr[0].appendChild(tmpDiv);
+
+  // check to see if help link exists
+  if (QTM.chkHelpLk()){
+    QTM.ttMenu.cfg.setProperty('context', [QTM.ttLkDvArr[0], 'tl', 'bl']);
+  }
+  else {
+    // there is no help link, right align tutorial droplist, move the cover
+    // to right
+    QTM.ttMenu.cfg.setProperty('context', [QTM.ttLkDvArr[0], 'tr', 'br']);
+    var ttMenuCvrArr
+      = Dom.getElementsByClassName('ttMenuCover','div','tutorialMenu');
+    Dom.addClass(ttMenuCvrArr[0],'ttMenuCoverToRight');
+  }
+  Event.addListener(QTM.listenTo, 'mouseover', QTM.showTutorialMenu);
+};
+
+/**
+ * Javascript for tutorial screenshots
+ *
+ */
+var QTS = {}; // quia tutorial screenshot
+
+QTS.shuffleMainImg = function(){
+  var randNum = Math.floor((Math.random()*100))%2;
+  var mainImg = new Image();
+  mainImg.src = '/img/tutorials/random_phrases_v'
+    + (randNum+1).toString() + '.png';
+  Dom.get('tutorialMainImgDv').appendChild(mainImg);
+};
+
+QTS.listenTo = 'tutorialLtDv';
+QTS.overlay = null; // placeholder for overlay
+QTS.width = 422; // whole div width
+QTS.xOffset = 20; // width of the hook plus 4px
+QTS.height = 390; // whole div height
+QTS.yOffset = 50; // offset of the hook in y-axis, 30px+20px(50% of hook height)
+QTS.shadowHeight = 0;
+QTS.xPos = 0; // default div x position
+QTS.yPos = 0; // default div y position
+QTS.toRight = true; // default orientation of screen shot, extand to right
+
+// based up the mouse position, we figure out possible
+// location for the pop-over and it's orientation
+// 4 possible orientataions & we apply coresponding css class
+// [orientation: css class]
+// [right-up: rightUp11]
+// [left-up: rightUp01]
+// [right-down: rightUp10]
+// [left-down: rightUp00]
+QTS.orientLocate = function(e){
+  var posX, posY, bkClass, bkClassPrefix = 'rightUp';
+
+  var elTarget = Event.getTarget(e);
+
+  var hoverArea = Dom.getRegion(elTarget);
+  var hoverAreaMidX = (hoverArea.right + hoverArea.left)/2;
+  var hoverAreaMidY = (hoverArea.top + hoverArea.bottom)/2;
+
+  var vPort = Dom.getClientRegion();
+  var vPortMidX = (vPort.right + vPort.left)/2;
+  var vPortMidY = (vPort.top + vPort.bottom)/2;
+
+  var tutrScrnArea = Dom.getRegion(Dom.get('tutrScrn'));
+  QTS.height = tutrScrnArea.bottom - tutrScrnArea.top;
+
+  // default orientation is up and right.
+  var toUp = true; // up
+  if (hoverAreaMidX > vPortMidX){
+    QTS.toRight = false;
+  }
+  else {
+    QTS.toRight = true;
+  }
+  if (hoverAreaMidY < vPortMidY){
+    toUp = false;
+  }
+
+  // Y will use hoverAreaMidY, because there isn't much
+  // room to move up or down
+  posY = hoverAreaMidY;
+
+  // X-axis
+  // use hoverArea.right if QTS.toRight is true
+  // use hoverArea.left if QTS.toRight is false
+  // then adjust to make sure image fit, if not, shift X
+  if (QTS.toRight){
+    bkClass = bkClassPrefix + '1';
+    posX = hoverArea.right + QTS.xOffset;
+    while ((posX + QTS.width) > vPort.right){
+      posX--;
+    }
+  }
+  else {
+    bkClass = bkClassPrefix + '0';
+    posX = hoverArea.left - QTS.xOffset;
+    while ((posX - QTS.width) < vPort.left){
+      posX++;
+    }
+  } // if
+
+  // if toUp is true, actual starting of div is somewhere up there
+  // posY - height of div + offset of where the pointer is
+  if (toUp){
+    bkClass = bkClass + '1';
+    posY = posY - QTS.height + QTS.yOffset + QTS.shadowHeight;
+  }
+  else {
+    bkClass = bkClass + '0';
+    posY = posY - QTS.yOffset;
+  }
+
+  // if QTS.toRight is false, actual starting of div is on the left
+  if (!QTS.toRight){
+    posX = posX - QTS.width;
+  }
+
+  var bkObj = Dom.get('arrowDv');
+  var clsArr = bkObj.className.split(' ');
+  for (var i=0;i<clsArr.length;i++){
+    if (clsArr[i].indexOf('rightUp') > -1){
+      Dom.removeClass(bkObj, clsArr[i]);
+    }
+  } // for
+
+  Dom.addClass(bkObj, bkClass);
+  QTS.xPos = posX;
+  QTS.yPos = posY;
+};
+QTS.openTutorial = function(e){
+  Event.preventDefault(e);
+  var ret = QUTL.bubbleUp(e, 'tutorialLtDv', 'a', null);
+  QUTL.tutorialWindow(ret['href']);
+  QTS.overlay.hide();
+};
+QTS.prepare = function(e){
+
+  var ret = QUTL.bubbleUp(e, 'tutorialLtDv', 'a', ['url']);
+
+  if (ret['firstVal'] != null && ret['attrVal'] != null){
+
+    var hdrDiv = document.createElement('div');
+    Dom.addClass(hdrDiv, 'hdr');
+    hdrDiv.innerHTML = ret['firstVal'];
+
+    var divdrDiv = document.createElement('div');
+    Dom.addClass(divdrDiv, 'divdr');
+
+    var scrnShotDiv = document.createElement('div');
+    Dom.addClass(scrnShotDiv, 'scrnShot');
+    scrnShotDiv.innerHTML = '<img id="qtsImg" border="0" height="300" src="'
+      + ret['attrVal']['url'] + '" />';
+    var tmpDiv = document.createElement('div');
+    tmpDiv.appendChild(hdrDiv);
+    tmpDiv.appendChild(divdrDiv);
+    tmpDiv.appendChild(scrnShotDiv);
+
+    if (Dom.get('tutrScrn').style.display === 'none'){
+      Dom.get('tutrScrn').style.display = 'block';
+    }
+    QTS.overlay.setBody(tmpDiv);
+
+    QTS.orientLocate(e);
+    QTS.overlay.cfg.setProperty('xy', [QTS.xPos, QTS.yPos]);
+    // Event.addListener('qtsImg', 'load', QTS.show);
+
+    var tmpArea = Dom.getRegion(tmpDiv);
+    var tmpHeight = tmpArea.bottom - tmpArea.top;
+    Dom.get('shdowBd').style.height = tmpHeight;
+
+    QTS.show();
+
+    if (QTS.toRight){
+      Dom.get('tutrShdow').style.left= '5px';
+    }
+    else {
+      Dom.get('tutrShdow').style.left = '-5px';
+    }
+  } // end if
+};
+
+QTS.show = function(){
+  QTS.overlay.show();
+};
+
+QTS.hide = function(e){
+  QTS.overlay.hide();
+};
+
