@@ -19,7 +19,7 @@ public class CharacterNormalizer {
 	static String Windows(String text) {
 		String x =text;
 		String y = x;
-		y = Normalizer.normalize(x.replaceAll("í", ""), Normalizer.Form.NFC);
+		y = Normalizer.normalize(x.replaceAll("í", "Ã­"), Normalizer.Form.NFC);
 		x=y;
 		y = Normalizer.normalize(x.replaceAll("¡", "�"), Normalizer.Form.NFC);
 		x=y;
