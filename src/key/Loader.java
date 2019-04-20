@@ -4,7 +4,9 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -37,8 +39,8 @@ public class Loader {
 		return answers;
 	}
 
-	FileReader fr = null;
-	BufferedReader br = null;
+	//FileReader fr = null;
+	//BufferedReader br = null;
 	String[] tempsol = new String[2];
 	List<String> lines = new ArrayList<>();
 	int solutionCounter = 1;
@@ -59,10 +61,14 @@ public class Loader {
 		String wordToFind = "<li><div><span class=";
 
 		FileWorker fileLoad = new FileWorker();
+		lines.add("null:null");
 		try {
-			fr = new FileReader(fileLoad.FileReader().getAbsolutePath());
-			br = new BufferedReader(fr);
-			while ((s = br.readLine()) != null) {
+			/*
+			 * fr = new FileReader(fileLoad.FileReader().getAbsolutePath()); br = new
+			 * BufferedReader(fr);
+			 */
+			BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileLoad.FileReader().getAbsolutePath()), "UTF-8"));
+			while ((s = in.readLine()) != null) {
 				stringLine = stringLine + s;
 				stringLine = stringLine + " ";/* Add space */
 				countLine++;
@@ -114,7 +120,7 @@ public class Loader {
 				System.out.println("out:" + tempsol[0] + ", " + tempsol[1]);
 
 				solution[i][0] = tempsol[0];
-				solution[i][1] =tempsol[1];
+				solution[i][1] = tempsol[1];
 			}
 
 			System.out.println(solution[0][0]);
@@ -134,7 +140,7 @@ public class Loader {
 			 * File file1 = FileChooserDemo.FileChoser(); while (file1 == null) { file1 =
 			 * FileChooserDemo.getf(); }
 			 */
-
+			in.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -157,16 +163,16 @@ public class Loader {
 		// file = new
 		// File("C:\\Users\\User\\eclipse-workspace\\QUIA8\\src\\key\\the-file-name.txt");
 		try {
-			fr = new FileReader(fileVocab.FileReader().getAbsolutePath());
-			br = new BufferedReader(fr);
-			while ((s = br.readLine()) != null) {
+			BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(fileVocab.FileReader().getAbsolutePath()), "UTF-8"));
+
+			while ((s = in.readLine()) != null) {
 				stringLine = CharacterNormalizer.Norm(stringLine + s);
 				stringLine = CharacterNormalizer.Norm(stringLine + " ");/* Add space */
 				questions.add(s.split(":")[0]);
 				answers.add(s.split(":")[1]);
 			}
-			fr.close();
-			br.close();
+			in.close();
+			//br.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
