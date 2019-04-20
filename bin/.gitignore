@@ -1,2 +1,6 @@
-/.settings/
+/gui/
+/key/
+/main/
 /solve/
+/sqlwebconnection/
+/ui/
