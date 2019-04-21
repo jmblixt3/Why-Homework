@@ -18,14 +18,14 @@ public class SQLDriver {
 					"jdbc:mysql://85.10.205.173:3306/whydohomework?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC",
 					"jmblixt3", "pig18sheep");
 			// "?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
-			// here sonoo is database name, root is username and password
+			
 			stmt = con.createStatement();
 
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -61,13 +61,13 @@ public class SQLDriver {
 
 	public void markTopComplete() {
 		try {
-			String username = null;
+			String verification = null;
 			ResultSet rs = stmt.executeQuery("SELECT * FROM whyhomework " + "LIMIT 1;");
 			rs.next();
-			username = rs.getString(1);
-			System.out.println(username);
+			verification = rs.getString(4);
+			System.out.println(verification);
 			stmt = con.createStatement();
-			String sql = "UPDATE `whydohomework`.`whyhomework` SET `fulfilled` = '1' WHERE (username= '"+username+"');\n";
+			String sql = "UPDATE `whydohomework`.`whyhomework` SET `fulfilled` = '1' WHERE (verification= '"+verification+"');\n";
 			System.out.println(sql);
 			stmt.executeUpdate(sql);
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -18,7 +19,7 @@
       <menus>
         <Menu mnemonicParsing="false" text="File">
           <items>
-            <MenuItem fx:id="quit" mnemonicParsing="false" text="Quit" onAction="#Quit"/>
+            <MenuItem fx:id="quit" mnemonicParsing="false" onAction="#Quit" text="Quit" />
           </items>
         </Menu>
       </menus>
@@ -59,6 +60,8 @@
                            <children>
                               <Button fx:id="startWebDriver" layoutX="146.0" layoutY="156.0" mnemonicParsing="false" onAction="#StartWebDriver" text="Start WebDriver" textAlignment="CENTER" />
                               <Button fx:id="stopWebDriver" layoutX="351.0" layoutY="156.0" mnemonicParsing="false" onAction="#StopWebDriver" text="Stop WebDriver" textAlignment="CENTER" />
+                              <CheckBox fx:id="activeServer" layoutX="367.0" layoutY="234.0" mnemonicParsing="false" text="Server Active" />
+                              <Button layoutX="177.0" layoutY="230.0" mnemonicParsing="false" onAction="#StartServer" text="Start Server" />
                            </children>
                         </AnchorPane>
                      </content>

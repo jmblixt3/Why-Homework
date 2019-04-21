@@ -1,14 +1,12 @@
 package solve;
 
-import java.text.Normalizer;
 import java.util.List;
-import java.util.Set;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
 
 import key.CharacterNormalizer;
 
@@ -69,6 +67,8 @@ public class Scan {
 		answer.sendKeys(CharacterNormalizer.Norm(a.get(c)));
 		System.out.println(q.get(c) + ": " + a.get(c));
 		count++;
+		
+		////*[@id="quizContent"]/form/table[4]/tbody/tr/td/input
 		//// *[@id="drawAllQuestionsTbl"]/tbody/tr[1]/td/ol/li
 		//// *[@id="drawAllQuestionsTbl"]/tbody/tr[1]/td/ol/li/text()[1]
 		// *[@id="drawAllQuestionsTbl"]/tbody/tr[1]/td/ol/li/input
