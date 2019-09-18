@@ -73,7 +73,7 @@ public class BasicFXMLController {
 					System.out.println(hack.getcount());
 					System.out.println(load.getQuestions().size());
 					System.out.println(load.getQuestions().get(1));
-					while (hack.getcount() < load.getQuestions().size()) {
+					while (hack.getcount() <= load.getQuestions().size()) {
 						hack.Fill(load.getQuestions(), load.getAnswers(), driver.getDriver());
 					}
 				}

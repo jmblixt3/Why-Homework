@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
-	static String exePath = "/home/jonathan/eclipse-workspace/QUIA8/src/geckodriver";
+	static String exePath = "src/geckodriver.exe";
 	WebDriver driver = null;
 	public Driver() 
 	{

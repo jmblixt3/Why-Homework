@@ -1,2 +1,11 @@
-/sqlwebconnection/
+/bin/
+/desktop.ini
+/mysql-connector-java-8.0.15.jar
+/mysql-connector.jar
+/selenium/
 /gui/
+/key/
+/main/
+/solve/
+/sqlwebconnection/
+/ui/
